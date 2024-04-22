@@ -23,6 +23,8 @@ def get_numbers_ticket(min, max, quantity):
     min = 1
     max = 49
     quantity = 6
+    if min < 1 or max > 1000 or quantity < 1 or quantity > (max - min + 1) or min >= max:
+        return []
     result_array = set()
     while len(result_array) < quantity:
         result_array.add(randint(min, max))
